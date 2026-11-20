@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A focused study dashboard for JEE preparation." />
+    <title>Orbit JEE | Study smarter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <a class="brand" href="#" aria-label="Orbit JEE home">
+          <span class="brand-mark">O</span>
+          <span>orbit<span class="brand-dot">.</span>jee</span>
+        </a>
+
+        <nav class="main-nav" aria-label="Main navigation">
+          <a class="nav-link active" href="#overview"><span>⌂</span> Overview</a>
+          <a class="nav-link" href="#materials"><span>▤</span> Study material</a>
+          <a class="nav-link" href="#practice"><span>◇</span> Practice sets</a>
+          <a class="nav-link" href="#progress"><span>◷</span> My progress</a>
+        </nav>
+
+        <div class="sidebar-bottom">
+          <div class="streak-card">
+            <div class="streak-icon">✦</div>
+            <div>
+              <strong>7 day streak</strong>
+              <span>Keep going, Arjun!</span>
+            </div>
+          </div>
+          <a class="nav-link muted" href="#"><span>⚙</span> Settings</a>
+          <a class="nav-link muted" href="#"><span>?</span> Help center</a>
+        </div>
+      </aside>
+
+      <main class="content">
+        <header class="topbar">
+          <button class="mobile-menu" aria-label="Open menu">☰</button>
+          <div class="breadcrumb">Workspace <span>/</span> Overview</div>
+          <div class="profile">
+            <button class="notification" aria-label="Notifications">♢<i></i></button>
+            <div class="avatar">A</div>
+            <span class="profile-name">Arjun Mehta</span>
+            <span class="chevron">⌄</span>
+          </div>
+        </header>
+
+        <section class="hero" id="overview">
+          <div>
+            <p class="eyebrow">THURSDAY, 20 NOVEMBER 2026</p>
+            <h1>Good morning, Arjun<span class="accent">.</span></h1>
+            <p class="hero-copy">Small progress every day adds up to a great rank.</p>
+          </div>
+          <div class="hero-orbit" aria-hidden="true">
+            <span class="orbit-ring ring-one"></span>
+            <span class="orbit-ring ring-two"></span>
+            <span class="orbit-dot"></span>
+            <span class="orbit-label">JEE<br />2027</span>
+          </div>
+        </section>
+
+        <section class="stats-grid" aria-label="Study summary">
+          <article class="stat-card">
+            <div class="stat-label"><span class="stat-icon purple">◴</span> Study time</div>
+            <strong>18<span>h 40m</span></strong>
+            <p><b>+12%</b> from last week</p>
+          </article>
+          <article class="stat-card">
+            <div class="stat-label"><span class="stat-icon orange">✓</span> Chapters done</div>
+            <strong>24<span>/ 87</span></strong>
+            <p><b>+3</b> this week</p>
+          </article>
+          <article class="stat-card">
+            <div class="stat-label"><span class="stat-icon blue">◉</span> Practice score</div>
+            <strong>78<span>%</span></strong>
+            <p><b>+6%</b> from last week</p>
+          </article>
+        </section>
+
+        <section class="section-block" id="materials">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">YOUR LIBRARY</p>
+              <h2>Study material</h2>
+            </div>
+            <div class="search-wrap">
+              <span>⌕</span>
+              <input id="searchInput" type="search" placeholder="Search chapters..." aria-label="Search chapters" />
+            </div>
+          </div>
+          <div class="subject-tabs" role="tablist" aria-label="Subjects">
+            <button class="subject-tab active" data-subject="all">All subjects <span>24</span></button>
+            <button class="subject-tab" data-subject="physics">Physics <span>8</span></button>
+            <button class="subject-tab" data-subject="chemistry">Chemistry <span>9</span></button>
+            <button class="subject-tab" data-subject="mathematics">Mathematics <span>7</span></button>
+          </div>
+          <div class="material-grid" id="materialGrid">
+            <article class="material-card" data-subject="physics" data-title="Kinematics">
+              <div class="card-top"><span class="subject-tag physics-tag">PHYSICS</span><span class="bookmark">♡</span></div>
+              <h3>Kinematics</h3>
+              <p>Motion in a straight line, vectors, and projectile motion.</p>
+              <div class="card-footer"><span>6 topics</span><span class="progress-label">80%</span></div>
+              <div class="progress"><span style="width: 80%"></span></div>
+            </article>
+            <article class="material-card" data-subject="chemistry" data-title="Chemical Bonding">
+              <div class="card-top"><span class="subject-tag chemistry-tag">CHEMISTRY</span><span class="bookmark">♡</span></div>
+              <h3>Chemical Bonding</h3>
+              <p>Lewis structures, VSEPR theory, and molecular orbitals.</p>
+              <div class="card-footer"><span>9 topics</span><span class="progress-label">65%</span></div>
+              <div class="progress"><span style="width: 65%"></span></div>
+            </article>
+            <article class="material-card" data-subject="mathematics" data-title="Quadratic Equations">
+              <div class="card-top"><span class="subject-tag math-tag">MATHEMATICS</span><span class="bookmark">♡</span></div>
+              <h3>Quadratic Equations</h3>
+              <p>Roots, coefficients, graphs, and complex number problems.</p>
+              <div class="card-footer"><span>7 topics</span><span class="progress-label">45%</span></div>
+              <div class="progress"><span style="width: 45%"></span></div>
+            </article>
+            <article class="material-card" data-subject="physics" data-title="Laws of Motion">
+              <div class="card-top"><span class="subject-tag physics-tag">PHYSICS</span><span class="bookmark">♡</span></div>
+              <h3>Laws of Motion</h3>
+              <p>Newton's laws, friction, circular motion, and dynamics.</p>
+              <div class="card-footer"><span>8 topics</span><span class="progress-label">30%</span></div>
+              <div class="progress"><span style="width: 30%"></span></div>
+            </article>
+          </div>
+          <p class="empty-state" id="emptyState">No chapters found. Try a different search.</p>
+        </section>
+
+        <section class="bottom-grid" id="practice">
+          <article class="panel plan-panel">
+            <div class="panel-heading"><div><p class="eyebrow">UP NEXT</p><h2>Today's plan</h2></div><button class="more-btn">•••</button></div>
+            <div class="plan-item"><span class="check-box"></span><div><strong>Revise: Kinematics</strong><small>Physics · 45 min</small></div><span class="plan-time">09:00</span></div>
+            <div class="plan-item"><span class="check-box"></span><div><strong>Practice set: Algebra</strong><small>Mathematics · 30 min</small></div><span class="plan-time">11:30</span></div>
+            <div class="plan-item"><span class="check-box done">✓</span><div><strong class="completed">Read: Periodic Table</strong><small>Chemistry · 25 min</small></div><span class="plan-time">07:30</span></div>
+            <button class="outline-button">View full study plan <span>→</span></button>
+          </article>
+          <article class="panel rank-panel" id="progress">
+            <div class="panel-heading"><div><p class="eyebrow">PERFORMANCE</p><h2>Weekly progress</h2></div><span class="week-label">This week⌄</span></div>
+            <div class="chart" aria-label="Weekly study hours chart">
+              <div class="chart-y"><span>6h</span><span>4h</span><span>2h</span><span>0h</span></div>
+              <div class="bars">
+                <div><i style="height: 46%"></i><span>Mon</span></div><div><i style="height: 62%"></i><span>Tue</span></div>
+                <div><i style="height: 35%"></i><span>Wed</span></div><div><i class="today" style="height: 82%"></i><span>Thu</span></div>
+                <div><i style="height: 55%"></i><span>Fri</span></div><div><i style="height: 28%"></i><span>Sat</span></div><div><i style="height: 15%"></i><span>Sun</span></div>
+              </div>
+            </div>
+          </article>
+        </section>
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
